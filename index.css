@@ -1,0 +1,152 @@
+/* 
+index.css
+=========
+
+Started: 04-02-26
+Updated: 26-02-26
+=================
+*/
+
+/* GENERAL */
+@font-face {
+  font-family: "OrbitronVariable";
+  src: url("./Orbitron-VariableFont_wght.ttf") format("woff2-variations");
+  font-weight: 1 1000; /* This tells CSS the range of weights available */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(180, 215, 248);
+
+  &:hover,
+  &:focus {
+    color: rgb(255, 255, 255);
+  }
+}
+
+header {
+  font-variation-settings: "wght" 200;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 40px 3vh 40px 3vh;
+}
+h1 {
+  font-family: "OrbitronVariable", sans-serif;
+  font-variation-settings: "wght" 742;
+  padding: 20px;
+}
+
+main {
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(90deg, rgb(175, 8, 175), rgb(202, 158, 238));
+}
+/* -------------------------------------------------- */
+
+/* BOOTSTRAP OVERRIDES */
+.col {
+  margin: 17px 0px;
+}
+.card {
+  transition: 400ms ease-out;
+  background-color: black;
+  color: white;
+  padding: 50px 30px;
+  border: none;
+  border: 1px solid black;
+  border-radius: 0px;
+
+  &:hover {
+    box-shadow: black 1px 1px 10px;
+    transform: translateY(-15px);
+  }
+}
+
+.card-title {
+  font-weight: 100;
+}
+
+.form-control,
+.form-control:focus {
+  outline: none;
+  background-color: transparent;
+  color: white;
+}
+
+.form-control::placeholder {
+  color: rgb(156, 156, 156);
+}
+/* -------------------------------------------------- */
+
+/* MY CLASSES */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#card-section {
+  /* Optional: add space so the scroll doesn't hide the top of your cards */
+  scroll-margin-top: 20px;
+  padding: 20px 3vh;
+}
+/* -------------------------------------------------- */
+
+/* AI */
+#filter-buttons .btn {
+  border-radius: 10px;
+  width: 250px;
+  height: 80px;
+
+  /* margin:5px 0px;  */
+  padding: 5px 20px;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+#filter-buttons .btn.active {
+  background-color: #0d6efd;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#result-count {
+  color: rgb(250, 250, 250);
+  padding: 30px 10px 0px 10px;
+  margin: 0px;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+#filter-buttons-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.badge {
+  font-weight: 400;
+}
+
+/* MEDIA QUERIES */
+/* When the screen is 450px or narrower */
+@media (max-width: 450px) {
+  #filter-buttons-container {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+/* -------------------------------------------------- */
