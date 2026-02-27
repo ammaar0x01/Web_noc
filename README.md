@@ -8,3 +8,8 @@
 ```
 git clone -b master https://github.com/ammaar0x01/Web_noc.git
 ```
+
+<h3>Screenshot</h3>
+
+![screenshot](screenshot.png)
+
